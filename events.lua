@@ -11,6 +11,13 @@ function Events:initialize()
 
 end
 
+function Events:triggers()
+
+
+
+
+
+end
 
 
 function Events:draw()

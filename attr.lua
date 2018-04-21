@@ -13,9 +13,9 @@ local attr_effects_list = {
   {"passion", "Whatever you do, work heartily, as for the Lord and not for men"},
   {"compassion", "Bear one another’s burdens, and so fulfill the law of Christ."},
   {"patience", "do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God."},
+  {"joy", "Rejoice in the Lord always; again I will say, rejoice."},
   {"control", "A man without self-control is like a city broken into and left without walls."},
   {"kindness", "A man who is kind benefits himself, but a cruel man hurts himself." },
-  {"joy", "Rejoice in the Lord always; again I will say, rejoice."},
   {"peace", "If possible, so far as it depends on you, live peaceably with all."}
 }
 local attr_town_list = {
@@ -34,6 +34,7 @@ local newsflash = {
   "punishment"}
 }
 
+
 function Attr:initialize()
 
 
@@ -41,7 +42,6 @@ end
 
 function Attr:setEffect(difficulty)
   return math.random(1, 13)
-
 end
 
 function Attr:effect(id)
@@ -53,6 +53,10 @@ end
 
 function Attr:getEText(id)
   return attr_effects_list[id]
+end
+
+function Attr:getNews(id)
+  return newsflash[id]
 end
 
 function Attr:newTownName()
