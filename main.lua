@@ -12,7 +12,7 @@ local class = require 'libs/middleclass'
 function love.load()
   love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {resizable=false, vsync=true, minwidth=800, minheight=600})
   love.window.setTitle("LD41 (PeatUno) - ....")
-  game = Game:new()
+  game = Game:new(5)
 end
 function love.update(dt)
   game:update(dt)
@@ -20,4 +20,5 @@ end
 function love.draw()
   game:draw()
   love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 10, 10)
+  love.graphics.print("Mouse: x = "..love.mouse.getX().." , y = "..love.mouse.getY())
 end
